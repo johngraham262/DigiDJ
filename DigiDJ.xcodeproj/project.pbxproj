@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C1BB21B14252C3100025237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21A14252C3100025237 /* UIKit.framework */; };
+		9C1BB21D14252C3100025237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21C14252C3100025237 /* Foundation.framework */; };
+		9C1BB22314252C3100025237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BB22114252C3100025237 /* InfoPlist.strings */; };
+		9C1BB22514252C3100025237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB22414252C3100025237 /* main.m */; };
+		9C1BB22914252C3100025237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB22814252C3100025237 /* AppDelegate.m */; };
+		9C1BB22C14252C3100025237 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB22B14252C3100025237 /* ViewController.m */; };
+		9C1BB22F14252C3100025237 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BB22D14252C3100025237 /* ViewController.xib */; };
+		9C1BB23714252C3100025237 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB23614252C3100025237 /* SenTestingKit.framework */; };
+		9C1BB23814252C3100025237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21A14252C3100025237 /* UIKit.framework */; };
+		9C1BB23914252C3100025237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21C14252C3100025237 /* Foundation.framework */; };
+		9C1BB24114252C3100025237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BB23F14252C3100025237 /* InfoPlist.strings */; };
+		9C1BB24414252C3100025237 /* DigiDJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB24314252C3100025237 /* DigiDJTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C1BB23A14252C3100025237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C1BB20D14252C3100025237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C1BB21514252C3100025237;
+			remoteInfo = DigiDJ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C1BB21614252C3100025237 /* DigiDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1BB21A14252C3100025237 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C1BB21C14252C3100025237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C1BB22014252C3100025237 /* DigiDJ-Info.plist */ = {isa = PBXFileReference; path = "DigiDJ-Info.plist"; sourceTree = "<group>"; };
+		9C1BB22214252C3100025237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C1BB22414252C3100025237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C1BB22614252C3100025237 /* DigiDJ-Prefix.pch */ = {isa = PBXFileReference; path = "DigiDJ-Prefix.pch"; sourceTree = "<group>"; };
+		9C1BB22714252C3100025237 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C1BB22814252C3100025237 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C1BB22A14252C3100025237 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9C1BB22B14252C3100025237 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C1BB22E14252C3100025237 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9C1BB23514252C3100025237 /* DigiDJTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigiDJTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1BB23614252C3100025237 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9C1BB23E14252C3100025237 /* DigiDJTests-Info.plist */ = {isa = PBXFileReference; path = "DigiDJTests-Info.plist"; sourceTree = "<group>"; };
+		9C1BB24014252C3100025237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C1BB24214252C3100025237 /* DigiDJTests.h */ = {isa = PBXFileReference; path = DigiDJTests.h; sourceTree = "<group>"; };
+		9C1BB24314252C3100025237 /* DigiDJTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigiDJTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C1BB21314252C3100025237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB21B14252C3100025237 /* UIKit.framework in Frameworks */,
+				9C1BB21D14252C3100025237 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1BB23114252C3100025237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB23714252C3100025237 /* SenTestingKit.framework in Frameworks */,
+				9C1BB23814252C3100025237 /* UIKit.framework in Frameworks */,
+				9C1BB23914252C3100025237 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C1BB20B14252C3100025237 = {
+			isa = PBXGroup;
+			children = (
+				9C1BB21E14252C3100025237 /* DigiDJ */,
+				9C1BB23C14252C3100025237 /* DigiDJTests */,
+				9C1BB21914252C3100025237 /* Frameworks */,
+				9C1BB21714252C3100025237 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C1BB21714252C3100025237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB21614252C3100025237 /* DigiDJ.app */,
+				9C1BB23514252C3100025237 /* DigiDJTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C1BB21914252C3100025237 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB21A14252C3100025237 /* UIKit.framework */,
+				9C1BB21C14252C3100025237 /* Foundation.framework */,
+				9C1BB23614252C3100025237 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C1BB21E14252C3100025237 /* DigiDJ */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB22714252C3100025237 /* AppDelegate.h */,
+				9C1BB22814252C3100025237 /* AppDelegate.m */,
+				9C1BB22A14252C3100025237 /* ViewController.h */,
+				9C1BB22B14252C3100025237 /* ViewController.m */,
+				9C1BB22D14252C3100025237 /* ViewController.xib */,
+				9C1BB21F14252C3100025237 /* Supporting Files */,
+			);
+			path = DigiDJ;
+			sourceTree = "<group>";
+		};
+		9C1BB21F14252C3100025237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB22014252C3100025237 /* DigiDJ-Info.plist */,
+				9C1BB22114252C3100025237 /* InfoPlist.strings */,
+				9C1BB22414252C3100025237 /* main.m */,
+				9C1BB22614252C3100025237 /* DigiDJ-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C1BB23C14252C3100025237 /* DigiDJTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB24214252C3100025237 /* DigiDJTests.h */,
+				9C1BB24314252C3100025237 /* DigiDJTests.m */,
+				9C1BB23D14252C3100025237 /* Supporting Files */,
+			);
+			path = DigiDJTests;
+			sourceTree = "<group>";
+		};
+		9C1BB23D14252C3100025237 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BB23E14252C3100025237 /* DigiDJTests-Info.plist */,
+				9C1BB23F14252C3100025237 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C1BB21514252C3100025237 /* DigiDJ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1BB24714252C3100025237 /* Build configuration list for PBXNativeTarget "DigiDJ" */;
+			buildPhases = (
+				9C1BB21214252C3100025237 /* Sources */,
+				9C1BB21314252C3100025237 /* Frameworks */,
+				9C1BB21414252C3100025237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigiDJ;
+			productName = DigiDJ;
+			productReference = 9C1BB21614252C3100025237 /* DigiDJ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C1BB23414252C3100025237 /* DigiDJTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1BB24A14252C3100025237 /* Build configuration list for PBXNativeTarget "DigiDJTests" */;
+			buildPhases = (
+				9C1BB23014252C3100025237 /* Sources */,
+				9C1BB23114252C3100025237 /* Frameworks */,
+				9C1BB23214252C3100025237 /* Resources */,
+				9C1BB23314252C3100025237 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C1BB23B14252C3100025237 /* PBXTargetDependency */,
+			);
+			name = DigiDJTests;
+			productName = DigiDJTests;
+			productReference = 9C1BB23514252C3100025237 /* DigiDJTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C1BB20D14252C3100025237 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 9C1BB21014252C3100025237 /* Build configuration list for PBXProject "DigiDJ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C1BB20B14252C3100025237;
+			productRefGroup = 9C1BB21714252C3100025237 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C1BB21514252C3100025237 /* DigiDJ */,
+				9C1BB23414252C3100025237 /* DigiDJTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C1BB21414252C3100025237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB22314252C3100025237 /* InfoPlist.strings in Resources */,
+				9C1BB22F14252C3100025237 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1BB23214252C3100025237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB24114252C3100025237 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C1BB23314252C3100025237 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C1BB21214252C3100025237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB22514252C3100025237 /* main.m in Sources */,
+				9C1BB22914252C3100025237 /* AppDelegate.m in Sources */,
+				9C1BB22C14252C3100025237 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C1BB23014252C3100025237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1BB24414252C3100025237 /* DigiDJTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C1BB23B14252C3100025237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C1BB21514252C3100025237 /* DigiDJ */;
+			targetProxy = 9C1BB23A14252C3100025237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C1BB22114252C3100025237 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1BB22214252C3100025237 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C1BB22D14252C3100025237 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1BB22E14252C3100025237 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		9C1BB23F14252C3100025237 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1BB24014252C3100025237 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C1BB24514252C3100025237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C1BB24614252C3100025237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C1BB24814252C3100025237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				INFOPLIST_FILE = "DigiDJ/DigiDJ-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C1BB24914252C3100025237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				INFOPLIST_FILE = "DigiDJ/DigiDJ-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9C1BB24B14252C3100025237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DigiDJ.app/DigiDJ";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				INFOPLIST_FILE = "DigiDJTests/DigiDJTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9C1BB24C14252C3100025237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DigiDJ.app/DigiDJ";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				INFOPLIST_FILE = "DigiDJTests/DigiDJTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C1BB21014252C3100025237 /* Build configuration list for PBXProject "DigiDJ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1BB24514252C3100025237 /* Debug */,
+				9C1BB24614252C3100025237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C1BB24714252C3100025237 /* Build configuration list for PBXNativeTarget "DigiDJ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1BB24814252C3100025237 /* Debug */,
+				9C1BB24914252C3100025237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C1BB24A14252C3100025237 /* Build configuration list for PBXNativeTarget "DigiDJTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1BB24B14252C3100025237 /* Debug */,
+				9C1BB24C14252C3100025237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C1BB20D14252C3100025237 /* Project object */;
+}
