@@ -1,21 +1,18 @@
-#import "SendSongRequest.h"
+#import "TracksGetter.h"
 
-@implementation SendSongRequest
+//http://192.168.201.21:5000/playlists/7Bdmon1qvlkMQjIIkMKdeC/tracks
+
+@implementation TracksGetter
 
 @synthesize delegate;
-@synthesize  songData;
+@synthesize tracksData;
 
-- (void)sendSongRequest:(id)theDelegate 
-             playlistId:(NSString *)playlistId 
-                trackId:(NSString *)trackId 
-              dollarAmt:(NSString *)dollarAmt {
-    
+- (void)getVenues:(id)theDelegate playlistId:(NSString *)playlistId {
     self.delegate = theDelegate;
-    songData = [[NSMutableData alloc] init];
+    tracksData = [[NSMutableData alloc] init];
     
     NSString *urlString = [NSString stringWithFormat:
-                           @"http://ec2-174-129-69-210.compute-1.amazonaws.com/playlists/%@/tracks/new?track_id=%@&dollar_amount=%@",
-                           playlistId, trackId, dollarAmt];
+                           @"http://ec2-174-129-69-210.compute-1.amazonaws.com/playlists/%@/tracks", playlistId];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData 
@@ -26,18 +23,18 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if(connection) {
-        songData = [NSMutableData data];
+        tracksData = [NSMutableData data];
     } else {
         NSLog(@"connection failed");
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [songData setLength:0];
+    [tracksData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [songData appendData:data];
+    [tracksData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -47,9 +44,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSString *dataContent = [[NSString alloc] initWithData:songData encoding:NSASCIIStringEncoding];
-    NSLog(@"Song request sent to DJ.");
-    [delegate sendSongFinished:dataContent];
+    NSString *dataContent = [[NSString alloc] initWithData:tracksData encoding:NSASCIIStringEncoding];
+    [delegate didGetTracks:dataContent];
 }
 
 @end

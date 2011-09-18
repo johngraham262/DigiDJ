@@ -4,14 +4,14 @@
 @implementation VenuesGetter
 
 @synthesize delegate;
-@synthesize userData;
+@synthesize venuesData;
 
 - (void)getVenues:(id)theDelegate{
     self.delegate = theDelegate;
-    userData = [[NSMutableData alloc] init];
+    venuesData = [[NSMutableData alloc] init];
     
     NSString *urlString = [NSString stringWithFormat:
-                           @"http://192.168.201.21:5000/playlists"];
+                           @"http://ec2-174-129-69-210.compute-1.amazonaws.com/playlists"];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData 
@@ -22,18 +22,18 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if(connection) {
-        userData = [NSMutableData data];
+        venuesData = [NSMutableData data];
     } else {
         NSLog(@"connection failed");
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [userData setLength:0];
+    [venuesData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [userData appendData:data];
+    [venuesData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -43,7 +43,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSString *dataContent = [[NSString alloc] initWithData:userData encoding:NSASCIIStringEncoding];
+    NSString *dataContent = [[NSString alloc] initWithData:venuesData encoding:NSASCIIStringEncoding];
     [delegate didLoadVenues:dataContent];
 }
 

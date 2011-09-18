@@ -1,22 +1,28 @@
-#import "SendSongRequest.h"
+#import "CreateCheckin.h"
 
-@implementation SendSongRequest
+@implementation CreateCheckin
 
 @synthesize delegate;
-@synthesize  songData;
+@synthesize checkinData;
+@synthesize venueId;
 
-- (void)sendSongRequest:(id)theDelegate 
-             playlistId:(NSString *)playlistId 
-                trackId:(NSString *)trackId 
-              dollarAmt:(NSString *)dollarAmt {
+- (void)sendCheckin:(id)theDelegate theVenueId:(NSString *)theVenueId {
     
     self.delegate = theDelegate;
-    songData = [[NSMutableData alloc] init];
+    checkinData = [NSMutableData data];
     
     NSString *urlString = [NSString stringWithFormat:
-                           @"http://ec2-174-129-69-210.compute-1.amazonaws.com/playlists/%@/tracks/new?track_id=%@&dollar_amount=%@",
-                           playlistId, trackId, dollarAmt];
+                           @"https://api.foursquare.com/v2/checkins/add"];
     NSURL *url = [NSURL URLWithString:urlString];
+
+//    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+//    [request addRequestHeader:@"Accept" value:@"application/json"];
+//    [request addRequestHeader:@"Content-Type" value:@"application/json"];
+//    NSString *dataContent = @"{\"id\":7,\"amount\":7.0,\"paid\":true}";
+//    NSLog(@"dataContent: %@", dataContent);
+//    [request appendPostData:[dataContent dataUsingEncoding:NSUTF8StringEncoding]];
+//    [request setRequestMethod:@"POST"];
+    
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData 
                                             timeoutInterval:10.0];
@@ -26,18 +32,18 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if(connection) {
-        songData = [NSMutableData data];
+        checkinData = [NSMutableData data];
     } else {
         NSLog(@"connection failed");
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [songData setLength:0];
+    [checkinData setLength:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [songData appendData:data];
+    [checkinData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -47,9 +53,9 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    NSString *dataContent = [[NSString alloc] initWithData:songData encoding:NSASCIIStringEncoding];
+    NSString *dataContent = [[NSString alloc] initWithData:checkinData encoding:NSASCIIStringEncoding];
     NSLog(@"Song request sent to DJ.");
-    [delegate sendSongFinished:dataContent];
+    [delegate didCheckin:dataContent];
 }
 
 @end

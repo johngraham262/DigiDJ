@@ -1,11 +1,15 @@
 #import "PlaylistViewController.h"
 #import "SpotifySearchViewController.h"
 
+#import "SBJson.h"
+
 @implementation PlaylistViewController
 
+@synthesize songs;
 @synthesize addSongButton;
 @synthesize venmoClient;
 @synthesize venue;
+@synthesize tracksGetter;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,13 +34,20 @@
 {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem.title = @"Back";
-    self.navigationItem.backBarButtonItem.title = @"Back";
+    self.navigationItem.backBarButtonItem.title = @"Back"; //these don't work
     
     addSongButton = [[UIBarButtonItem alloc] initWithTitle:@"Add Song" 
                                                      style:UIBarButtonItemStyleDone
                                                     target:self 
                                                     action:@selector(addSongAction)];
     self.navigationItem.rightBarButtonItem = addSongButton;
+    
+    self.songs = [NSMutableArray array];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    tracksGetter = [[TracksGetter alloc] init];
+    [tracksGetter getVenues:self playlistId:venue.playlistId];
 }
 
 - (void)addSongAction {
@@ -49,19 +60,16 @@
 
 - (void)viewDidUnload
 {
+    self.songs  = nil;
     [super viewDidUnload];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    NSLog(@"number of tracks: %d", songs.count);
+    return songs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,14 +81,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    //textLabel, detailTextLabel, imageView
-    cell.textLabel.text = @"Song Name";
-    cell.detailTextLabel.text = @"James Brown";
-    UIImage *venuePic = [UIImage imageWithContentsOfFile:nil];
-    cell.imageView.image = venuePic;
+    Song *songAtPath = [songs objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ ($%@)", songAtPath.name, songAtPath.dollarAmt];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", songAtPath.artist, songAtPath.album];
     
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    //    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+    //textLabel, detailTextLabel, imageView
+//    cell.textLabel.text = @"Song Name";
+//    cell.detailTextLabel.text = @"James Brown";
+//    UIImage *venuePic = [UIImage imageWithContentsOfFile:nil];
+//    cell.imageView.image = venuePic;
+//    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
     return cell;
 }
 
@@ -89,6 +99,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"selected a song from the playlist.");
+}
+
+//[{"track_id":"26nr9XnFCYWxBTIP7HyWXg","dollar_amount":"0.99"}]
+
+- (void)didGetTracks:(NSString *)jsonData {
+    SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+    NSError *error = nil;
+    NSArray *trackIds = [jsonParser objectWithString:jsonData error:&error];
+    
+    [songs removeAllObjects];
+    
+    NSEnumerator *e = [trackIds objectEnumerator];
+    id aTrack;
+    while (aTrack = [e nextObject]) {
+        Song *newSong = [[Song alloc] init];
+        newSong.spotifyId = [aTrack valueForKey:@"track_id"];
+        newSong.dollarAmt = [aTrack valueForKey:@"dollar_amount"];
+        [songs addObject:newSong];
+        
+        NSLog(@"%@ - %@", newSong.spotifyId, newSong.dollarAmt);
+        
+        //get the meta data from the spotify api
+        [newSong getSongData:newSong totalDelegate:self trackId:newSong.spotifyId];
+    }
+}
+
+- (void)didCompleteSongs {
+    [self.tableView reloadData];
 }
 
 @end

@@ -4,7 +4,7 @@
 
 @interface VenuesGetter : NSURLConnection
 
-@property (strong, nonatomic) NSMutableData *userData;
+@property (strong, nonatomic) NSMutableData *venuesData;
 @property (strong, nonatomic) id <VenuesGetterDelegate> delegate;
 
 - (void)getVenues:(id)theDelegate;

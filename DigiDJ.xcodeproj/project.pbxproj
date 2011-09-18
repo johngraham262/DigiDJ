@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C1572761426185300CF449A /* digidj-jingle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C1572751426185300CF449A /* digidj-jingle.mp3 */; };
+		9C1572791426347400CF449A /* TracksGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1572781426347400CF449A /* TracksGetter.m */; };
+		9C1572891426644D00CF449A /* CreateCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1572881426644C00CF449A /* CreateCheckin.m */; };
 		9C1BB21B14252C3100025237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21A14252C3100025237 /* UIKit.framework */; };
 		9C1BB21D14252C3100025237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21C14252C3100025237 /* Foundation.framework */; };
 		9C1BB22314252C3100025237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BB22114252C3100025237 /* InfoPlist.strings */; };
@@ -93,6 +95,10 @@
 
 /* Begin PBXFileReference section */
 		9C1572751426185300CF449A /* digidj-jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "digidj-jingle.mp3"; sourceTree = "<group>"; };
+		9C1572771426347400CF449A /* TracksGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TracksGetter.h; sourceTree = "<group>"; };
+		9C1572781426347400CF449A /* TracksGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TracksGetter.m; sourceTree = "<group>"; };
+		9C1572871426644C00CF449A /* CreateCheckin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCheckin.h; sourceTree = "<group>"; };
+		9C1572881426644C00CF449A /* CreateCheckin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCheckin.m; sourceTree = "<group>"; };
 		9C1BB21614252C3100025237 /* DigiDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1BB21A14252C3100025237 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C1BB21C14252C3100025237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -283,10 +289,14 @@
 				9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */,
 				9CBC95291425A8E200E277EA /* VenuesGetter.h */,
 				9CBC952A1425A8E200E277EA /* VenuesGetter.m */,
+				9C1572771426347400CF449A /* TracksGetter.h */,
+				9C1572781426347400CF449A /* TracksGetter.m */,
 				9CBC95331425BA1800E277EA /* SpotifyAPIWrapper.h */,
 				9CBC95321425BA1800E277EA /* SpotifyAPIWrapper.m */,
 				9C6697FF1425FE5E008DFE73 /* SendSongRequest.h */,
 				9C6698001425FE5E008DFE73 /* SendSongRequest.m */,
+				9C1572871426644C00CF449A /* CreateCheckin.h */,
+				9C1572881426644C00CF449A /* CreateCheckin.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -553,6 +563,8 @@
 				9CBC95441425C6DD00E277EA /* Song.m in Sources */,
 				9C6698011425FE5E008DFE73 /* SendSongRequest.m in Sources */,
 				9C66980414260DF1008DFE73 /* DigiDjDesignViewController.m in Sources */,
+				9C1572791426347400CF449A /* TracksGetter.m in Sources */,
+				9C1572891426644D00CF449A /* CreateCheckin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
