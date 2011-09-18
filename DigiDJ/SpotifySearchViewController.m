@@ -9,7 +9,6 @@ typedef enum {
 } actionSheetButton;
 
 @interface SpotifySearchViewController ()
-- (void)APISearchSpotify:(NSString*)query;  
 - (void)openVenmoAction:(UIViewController *)viewController
             venmoClient:(VenmoClient *)venmoClient 
        venmoTransaction:(VenmoTransaction *)venmoTransaction;
@@ -25,6 +24,7 @@ typedef enum {
 @synthesize venmoClient;
 @synthesize venmoTransaction;
 @synthesize venue;
+@synthesize sendSongRequest;
 
 - (void)didReceiveMemoryWarning
 {
@@ -146,6 +146,7 @@ typedef enum {
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
 
     CGFloat amount = 0.99f;
+    NSString *dollar = @".99";
     
     if (buttonIndex == PLAY_QUEUE) {
         //initiate 99c payment
@@ -153,6 +154,7 @@ typedef enum {
     } else if (buttonIndex == PLAY_NEXT) {
         //initiate 5d payment
         amount = 5.00f;
+        dollar = @"5.00";
     } else {
         return;
     }
@@ -165,6 +167,13 @@ typedef enum {
     venmoTransaction.note = note;
     venmoTransaction.toUserHandle = venue.venmoUsername;
     [self openVenmoAction:self venmoClient:venmoClient venmoTransaction:venmoTransaction];
+    
+    //send the song request to the server
+    sendSongRequest = [[SendSongRequest alloc] init];
+    [sendSongRequest sendSongRequest:nil 
+                          playlistId:venue.playlistId
+                             trackId:selectedSong.url
+                           dollarAmt:dollar];
 }
 
 - (void)openVenmoAction:(UIViewController *)theViewController
@@ -229,7 +238,8 @@ typedef enum {
         newSong.name = [song valueForKey:@"name"];
         newSong.artist = [[[song valueForKey:@"artists"] valueForKey:@"name"] objectAtIndex:0];
         newSong.album = [[song valueForKey:@"album"] valueForKey:@"name"];
-        newSong.url = [song valueForKey:@"href"];
+        NSString *oldURL = [song valueForKey:@"href"];
+        newSong.url = [oldURL stringByReplacingOccurrencesOfString:@"spotify:track:" withString:@""];
 
         [spotifySearchResultsDataArray addObject:newSong];
         limit++;

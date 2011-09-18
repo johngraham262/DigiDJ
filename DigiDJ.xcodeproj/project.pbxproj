@@ -21,6 +21,7 @@
 		9C1BB2531425331800025237 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB2521425331800025237 /* LoginViewController.m */; };
 		9C1BB25A14253A6E00025237 /* VenueDJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB25914253A6E00025237 /* VenueDJTableViewController.m */; };
 		9C1BB25D14254F1B00025237 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB25C14254F1B00025237 /* PlaylistViewController.m */; };
+		9C6698011425FE5E008DFE73 /* SendSongRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6698001425FE5E008DFE73 /* SendSongRequest.m */; };
 		9CB1D45C14255E8800CD3DB6 /* FoursquareUserDetailGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */; };
 		9CBC9500142572AC00E277EA /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94E8142572AC00E277EA /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CBC9501142572AC00E277EA /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94EB142572AC00E277EA /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -106,6 +107,8 @@
 		9C1BB25914253A6E00025237 /* VenueDJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDJTableViewController.m; sourceTree = "<group>"; };
 		9C1BB25B14254F1B00025237 /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
 		9C1BB25C14254F1B00025237 /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
+		9C6697FF1425FE5E008DFE73 /* SendSongRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendSongRequest.h; sourceTree = "<group>"; };
+		9C6698001425FE5E008DFE73 /* SendSongRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendSongRequest.m; sourceTree = "<group>"; };
 		9CB1D45A14255E8800CD3DB6 /* FoursquareUserDetailGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareUserDetailGetter.h; sourceTree = "<group>"; };
 		9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareUserDetailGetter.m; sourceTree = "<group>"; };
 		9CBC94E7142572AC00E277EA /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				9CBC952A1425A8E200E277EA /* VenuesGetter.m */,
 				9CBC95331425BA1800E277EA /* SpotifyAPIWrapper.h */,
 				9CBC95321425BA1800E277EA /* SpotifyAPIWrapper.m */,
+				9C6697FF1425FE5E008DFE73 /* SendSongRequest.h */,
+				9C6698001425FE5E008DFE73 /* SendSongRequest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				9CBC95311425B93400E277EA /* SpotifySearchViewController.m in Sources */,
 				9CBC95341425BA1900E277EA /* SpotifyAPIWrapper.m in Sources */,
 				9CBC95441425C6DD00E277EA /* Song.m in Sources */,
+				9C6698011425FE5E008DFE73 /* SendSongRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

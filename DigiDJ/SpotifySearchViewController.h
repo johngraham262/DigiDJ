@@ -4,6 +4,7 @@
 #import "SpotifyAPIWrapper.h"
 #import "Song.h"
 #import "Venue.h"
+#import "SendSongRequest.h"
 
 @interface SpotifySearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, SpotifyAPIProtocol, UIActionSheetDelegate>  {
     UITableView *spotifySearchResultsTable;
@@ -20,5 +21,6 @@
 @property (strong, nonatomic) VenmoClient *venmoClient;
 @property (strong, nonatomic) VenmoTransaction *venmoTransaction;
 @property (strong, nonatomic) Venue *venue;
+@property (strong, nonatomic) SendSongRequest *sendSongRequest;
 
 @end
