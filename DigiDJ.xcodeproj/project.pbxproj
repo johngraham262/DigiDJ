@@ -35,6 +35,12 @@
 		9CBC950A142572AC00E277EA /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94FD142572AC00E277EA /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CBC950B142572AC00E277EA /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94FF142572AC00E277EA /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CBC950F1425797300E277EA /* HelperFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC950E1425797300E277EA /* HelperFunctions.m */; };
+		9CBC952414257C1700E277EA /* libVenmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBC951D14257B5200E277EA /* libVenmo.a */; };
+		9CBC952B1425A8E200E277EA /* VenuesGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC952A1425A8E200E277EA /* VenuesGetter.m */; };
+		9CBC952E1425B69B00E277EA /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC952D1425B69B00E277EA /* Venue.m */; };
+		9CBC95311425B93400E277EA /* SpotifySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC952F1425B93400E277EA /* SpotifySearchViewController.m */; };
+		9CBC95341425BA1900E277EA /* SpotifyAPIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC95321425BA1800E277EA /* SpotifyAPIWrapper.m */; };
+		9CBC95441425C6DD00E277EA /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC95431425C6DD00E277EA /* Song.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = C9BD6C7A13EEE06400F4D8F4;
 			remoteInfo = VenmoSpecs;
+		};
+		9CBC952214257C0700E277EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CBC951114257B5200E277EA /* Venmo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9BD6C6913EEE06400F4D8F4;
+			remoteInfo = Venmo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,6 +136,16 @@
 		9CBC950D1425797300E277EA /* HelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperFunctions.h; sourceTree = "<group>"; };
 		9CBC950E1425797300E277EA /* HelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperFunctions.m; sourceTree = "<group>"; };
 		9CBC951114257B5200E277EA /* Venmo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Venmo.xcodeproj; path = Libraries/Venmo/Venmo.xcodeproj; sourceTree = "<group>"; };
+		9CBC95291425A8E200E277EA /* VenuesGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesGetter.h; sourceTree = "<group>"; };
+		9CBC952A1425A8E200E277EA /* VenuesGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesGetter.m; sourceTree = "<group>"; };
+		9CBC952C1425B69B00E277EA /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		9CBC952D1425B69B00E277EA /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		9CBC952F1425B93400E277EA /* SpotifySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifySearchViewController.m; sourceTree = "<group>"; };
+		9CBC95301425B93400E277EA /* SpotifySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifySearchViewController.h; sourceTree = "<group>"; };
+		9CBC95321425BA1800E277EA /* SpotifyAPIWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyAPIWrapper.m; sourceTree = "<group>"; };
+		9CBC95331425BA1800E277EA /* SpotifyAPIWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyAPIWrapper.h; sourceTree = "<group>"; };
+		9CBC95421425C6DD00E277EA /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		9CBC95431425C6DD00E277EA /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +155,7 @@
 			files = (
 				9C1BB21B14252C3100025237 /* UIKit.framework in Frameworks */,
 				9C1BB21D14252C3100025237 /* Foundation.framework in Frameworks */,
+				9CBC952414257C1700E277EA /* libVenmo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +175,9 @@
 		9C1BB20B14252C3100025237 = {
 			isa = PBXGroup;
 			children = (
-				9CBC951014257B3400E277EA /* Libraries */,
 				9C1BB21E14252C3100025237 /* DigiDJ */,
 				9CBC94E6142572AC00E277EA /* SBJson_Classes */,
+				9CBC951014257B3400E277EA /* Libraries */,
 				9C1BB23C14252C3100025237 /* DigiDJTests */,
 				9C1BB21914252C3100025237 /* Frameworks */,
 				9C1BB21714252C3100025237 /* Products */,
@@ -228,8 +252,16 @@
 		9C1BB24D14252C4B00025237 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9CBC952C1425B69B00E277EA /* Venue.h */,
+				9CBC952D1425B69B00E277EA /* Venue.m */,
+				9CBC95421425C6DD00E277EA /* Song.h */,
+				9CBC95431425C6DD00E277EA /* Song.m */,
 				9CB1D45A14255E8800CD3DB6 /* FoursquareUserDetailGetter.h */,
 				9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */,
+				9CBC95291425A8E200E277EA /* VenuesGetter.h */,
+				9CBC952A1425A8E200E277EA /* VenuesGetter.m */,
+				9CBC95331425BA1800E277EA /* SpotifyAPIWrapper.h */,
+				9CBC95321425BA1800E277EA /* SpotifyAPIWrapper.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -252,6 +284,8 @@
 				9C1BB25914253A6E00025237 /* VenueDJTableViewController.m */,
 				9C1BB25B14254F1B00025237 /* PlaylistViewController.h */,
 				9C1BB25C14254F1B00025237 /* PlaylistViewController.m */,
+				9CBC95301425B93400E277EA /* SpotifySearchViewController.h */,
+				9CBC952F1425B93400E277EA /* SpotifySearchViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +354,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9CBC952314257C0700E277EA /* PBXTargetDependency */,
 			);
 			name = DigiDJ;
 			productName = DigiDJ;
@@ -461,6 +496,11 @@
 				9CBC950A142572AC00E277EA /* SBJsonUTF8Stream.m in Sources */,
 				9CBC950B142572AC00E277EA /* SBJsonWriter.m in Sources */,
 				9CBC950F1425797300E277EA /* HelperFunctions.m in Sources */,
+				9CBC952B1425A8E200E277EA /* VenuesGetter.m in Sources */,
+				9CBC952E1425B69B00E277EA /* Venue.m in Sources */,
+				9CBC95311425B93400E277EA /* SpotifySearchViewController.m in Sources */,
+				9CBC95341425BA1900E277EA /* SpotifyAPIWrapper.m in Sources */,
+				9CBC95441425C6DD00E277EA /* Song.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +519,11 @@
 			isa = PBXTargetDependency;
 			target = 9C1BB21514252C3100025237 /* DigiDJ */;
 			targetProxy = 9C1BB23A14252C3100025237 /* PBXContainerItemProxy */;
+		};
+		9CBC952314257C0700E277EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Venmo;
+			targetProxy = 9CBC952214257C0700E277EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,7 +597,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				HEADER_SEARCH_PATHS = Libraries/Venmo;
 				INFOPLIST_FILE = "DigiDJ/DigiDJ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = Libraries/Venmo;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,7 +616,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DigiDJ/DigiDJ-Prefix.pch";
+				HEADER_SEARCH_PATHS = Libraries/Venmo;
 				INFOPLIST_FILE = "DigiDJ/DigiDJ-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = Libraries/Venmo;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

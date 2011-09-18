@@ -1,19 +1,17 @@
-#import "FoursquareUserDetailGetter.h"
+#import "VenuesGetter.h"
+#import "HelperFunctions.h"
 
-@implementation FoursquareUserDetailGetter
+@implementation VenuesGetter
 
 @synthesize delegate;
 @synthesize userData;
 
-- (void)getFriendData:(id)tableViewController {
-    self.delegate = tableViewController;
+- (void)getVenues:(id)theDelegate{
+    self.delegate = theDelegate;
     userData = [[NSMutableData alloc] init];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *accessToken = [defaults objectForKey:@"access_token"];
     NSString *urlString = [NSString stringWithFormat:
-                           @"https://api.foursquare.com/v2/users/self?oauth_token=%@&v=%@", 
-                           accessToken, [HelperFunctions dateAsString]];
+                           @"http://192.168.201.21:5000/playlists"];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData 
@@ -21,6 +19,8 @@
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest
                                                                   delegate:self];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if(connection) {
         userData = [NSMutableData data];
     } else {
@@ -37,12 +37,14 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSLog(@"CONNECTION FAILED: %@", [error description]);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     NSString *dataContent = [[NSString alloc] initWithData:userData encoding:NSASCIIStringEncoding];
-    [delegate didLoadFoursquareDetails:dataContent];
+    [delegate didLoadVenues:dataContent];
 }
 
 @end

@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "HelperFunctions.h"
 
 @protocol FoursquareDetailProtocol;
 
@@ -6,6 +7,8 @@
 
 @property (assign, nonatomic) id <FoursquareDetailProtocol> delegate;
 @property (strong, nonatomic) NSMutableData *userData;
+
+- (void)getFriendData:(id)tableViewController;
 
 @end
 
