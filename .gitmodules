@@ -1,0 +1,3 @@
+[submodule "Libraries/Venmo"]
+	path = Libraries/Venmo
+	url = https://github.com/venmo/venmo-ios-sdk.git
