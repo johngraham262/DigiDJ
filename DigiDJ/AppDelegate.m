@@ -75,7 +75,7 @@
     
     [self createLoginItems];
 
-    [UIView transitionWithView:window duration:0.6
+    [UIView transitionWithView:window duration:2.0
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     animations:^{
                         window.rootViewController = navigationController;

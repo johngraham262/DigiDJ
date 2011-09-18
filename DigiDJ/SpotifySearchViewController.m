@@ -159,6 +159,12 @@ typedef enum {
         return;
     }
     
+    //check the user in
+    CreateCheckin *theCheckin = [[CreateCheckin alloc] init];
+    [theCheckin sendCheckin:nil theVenueId:venue.foursquareId];
+    
+    
+    
     NSString *note = [NSString stringWithFormat:@"to play \"%@\" by %@ from the album %@", 
                       selectedSong.name, selectedSong.artist, selectedSong.album];
     

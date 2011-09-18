@@ -5,6 +5,7 @@
 #import "Song.h"
 #import "Venue.h"
 #import "SendSongRequest.h"
+#import "CreateCheckin.h"
 
 @interface SpotifySearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, SpotifyAPIProtocol, UIActionSheetDelegate>  {
     UITableView *spotifySearchResultsTable;

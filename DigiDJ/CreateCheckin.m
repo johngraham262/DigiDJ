@@ -11,22 +11,17 @@
     self.delegate = theDelegate;
     checkinData = [NSMutableData data];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *accessToken = [defaults objectForKey:@"access_token"];
     NSString *urlString = [NSString stringWithFormat:
-                           @"https://api.foursquare.com/v2/checkins/add"];
+                           @"https://api.foursquare.com/v2/checkins/add?oauth_token=%@&venueId=%@", accessToken, theVenueId];
     NSURL *url = [NSURL URLWithString:urlString];
-
-//    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-//    [request addRequestHeader:@"Accept" value:@"application/json"];
-//    [request addRequestHeader:@"Content-Type" value:@"application/json"];
-//    NSString *dataContent = @"{\"id\":7,\"amount\":7.0,\"paid\":true}";
-//    NSLog(@"dataContent: %@", dataContent);
-//    [request appendPostData:[dataContent dataUsingEncoding:NSUTF8StringEncoding]];
-//    [request setRequestMethod:@"POST"];
     
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
-                                                cachePolicy:NSURLRequestReloadIgnoringCacheData 
-                                            timeoutInterval:10.0];
-    
+    NSMutableURLRequest *urlRequest =
+    [NSMutableURLRequest requestWithURL:url 
+                            cachePolicy:NSURLRequestReloadIgnoringCacheData 
+                        timeoutInterval:10.0];
+    [urlRequest setHTTPMethod:@"POST"];
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest
                                                                   delegate:self];
     
