@@ -45,6 +45,27 @@
 			remoteGlobalIDString = 9C1BB21514252C3100025237;
 			remoteInfo = DigiDJ;
 		};
+		9CBC951C14257B5200E277EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CBC951114257B5200E277EA /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9BD6C6A13EEE06400F4D8F4;
+			remoteInfo = Venmo;
+		};
+		9CBC951E14257B5200E277EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CBC951114257B5200E277EA /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9550E7613F5C48900212008;
+			remoteInfo = VenmoApp;
+		};
+		9CBC952014257B5200E277EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CBC951114257B5200E277EA /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9BD6C7A13EEE06400F4D8F4;
+			remoteInfo = VenmoSpecs;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +122,7 @@
 		9CBC94FF142572AC00E277EA /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		9CBC950D1425797300E277EA /* HelperFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperFunctions.h; sourceTree = "<group>"; };
 		9CBC950E1425797300E277EA /* HelperFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperFunctions.m; sourceTree = "<group>"; };
+		9CBC951114257B5200E277EA /* Venmo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Venmo.xcodeproj; path = Libraries/Venmo/Venmo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +151,7 @@
 		9C1BB20B14252C3100025237 = {
 			isa = PBXGroup;
 			children = (
+				9CBC951014257B3400E277EA /* Libraries */,
 				9C1BB21E14252C3100025237 /* DigiDJ */,
 				9CBC94E6142572AC00E277EA /* SBJson_Classes */,
 				9C1BB23C14252C3100025237 /* DigiDJTests */,
@@ -265,6 +288,24 @@
 			path = SBJson_Classes;
 			sourceTree = "<group>";
 		};
+		9CBC951014257B3400E277EA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9CBC951114257B5200E277EA /* Venmo.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		9CBC951214257B5200E277EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CBC951D14257B5200E277EA /* libVenmo.a */,
+				9CBC951F14257B5200E277EA /* VenmoApp.app */,
+				9CBC952114257B5200E277EA /* VenmoSpecs.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +363,12 @@
 			mainGroup = 9C1BB20B14252C3100025237;
 			productRefGroup = 9C1BB21714252C3100025237 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9CBC951214257B5200E277EA /* Products */;
+					ProjectRef = 9CBC951114257B5200E277EA /* Venmo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9C1BB21514252C3100025237 /* DigiDJ */,
@@ -329,6 +376,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9CBC951D14257B5200E277EA /* libVenmo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVenmo.a;
+			remoteRef = 9CBC951C14257B5200E277EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CBC951F14257B5200E277EA /* VenmoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = VenmoApp.app;
+			remoteRef = 9CBC951E14257B5200E277EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CBC952114257B5200E277EA /* VenmoSpecs.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VenmoSpecs.octest;
+			remoteRef = 9CBC952014257B5200E277EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9C1BB21414252C3100025237 /* Resources */ = {
