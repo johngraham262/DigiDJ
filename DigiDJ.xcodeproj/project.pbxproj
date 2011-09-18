@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1572761426185300CF449A /* digidj-jingle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C1572751426185300CF449A /* digidj-jingle.mp3 */; };
 		9C1BB21B14252C3100025237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21A14252C3100025237 /* UIKit.framework */; };
 		9C1BB21D14252C3100025237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BB21C14252C3100025237 /* Foundation.framework */; };
 		9C1BB22314252C3100025237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BB22114252C3100025237 /* InfoPlist.strings */; };
@@ -22,6 +23,14 @@
 		9C1BB25A14253A6E00025237 /* VenueDJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB25914253A6E00025237 /* VenueDJTableViewController.m */; };
 		9C1BB25D14254F1B00025237 /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BB25C14254F1B00025237 /* PlaylistViewController.m */; };
 		9C6698011425FE5E008DFE73 /* SendSongRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6698001425FE5E008DFE73 /* SendSongRequest.m */; };
+		9C66980414260DF1008DFE73 /* DigiDjDesignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C66980214260DF1008DFE73 /* DigiDjDesignViewController.m */; };
+		9C66980D14260DFD008DFE73 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980614260DFD008DFE73 /* background.png */; };
+		9C66980E14260DFD008DFE73 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980714260DFD008DFE73 /* background@2x.png */; };
+		9C66980F14260DFD008DFE73 /* homeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980814260DFD008DFE73 /* homeBackground.png */; };
+		9C66981014260DFD008DFE73 /* homeBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980914260DFD008DFE73 /* homeBackground@2x.png */; };
+		9C66981114260DFD008DFE73 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980A14260DFD008DFE73 /* icon.png */; };
+		9C66981214260DFD008DFE73 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980B14260DFD008DFE73 /* icon@2x.png */; };
+		9C66981314260DFD008DFE73 /* swoosh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9C66980C14260DFD008DFE73 /* swoosh.caf */; };
 		9CB1D45C14255E8800CD3DB6 /* FoursquareUserDetailGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */; };
 		9CBC9500142572AC00E277EA /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94E8142572AC00E277EA /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9CBC9501142572AC00E277EA /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC94EB142572AC00E277EA /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -83,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1572751426185300CF449A /* digidj-jingle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "digidj-jingle.mp3"; sourceTree = "<group>"; };
 		9C1BB21614252C3100025237 /* DigiDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1BB21A14252C3100025237 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C1BB21C14252C3100025237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +119,15 @@
 		9C1BB25C14254F1B00025237 /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
 		9C6697FF1425FE5E008DFE73 /* SendSongRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendSongRequest.h; sourceTree = "<group>"; };
 		9C6698001425FE5E008DFE73 /* SendSongRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendSongRequest.m; sourceTree = "<group>"; };
+		9C66980214260DF1008DFE73 /* DigiDjDesignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigiDjDesignViewController.m; sourceTree = "<group>"; };
+		9C66980314260DF1008DFE73 /* DigiDjDesignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigiDjDesignViewController.h; sourceTree = "<group>"; };
+		9C66980614260DFD008DFE73 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9C66980714260DFD008DFE73 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		9C66980814260DFD008DFE73 /* homeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBackground.png; sourceTree = "<group>"; };
+		9C66980914260DFD008DFE73 /* homeBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeBackground@2x.png"; sourceTree = "<group>"; };
+		9C66980A14260DFD008DFE73 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9C66980B14260DFD008DFE73 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		9C66980C14260DFD008DFE73 /* swoosh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh.caf; sourceTree = "<group>"; };
 		9CB1D45A14255E8800CD3DB6 /* FoursquareUserDetailGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareUserDetailGetter.h; sourceTree = "<group>"; };
 		9CB1D45B14255E8800CD3DB6 /* FoursquareUserDetailGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareUserDetailGetter.m; sourceTree = "<group>"; };
 		9CBC94E7142572AC00E277EA /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -209,6 +228,7 @@
 		9C1BB21E14252C3100025237 /* DigiDJ */ = {
 			isa = PBXGroup;
 			children = (
+				9C66980514260DFD008DFE73 /* Resources */,
 				9C1BB22714252C3100025237 /* AppDelegate.h */,
 				9C1BB22814252C3100025237 /* AppDelegate.m */,
 				9C1BB25014252C5800025237 /* Controllers */,
@@ -281,6 +301,8 @@
 		9C1BB25014252C5800025237 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9C66980314260DF1008DFE73 /* DigiDjDesignViewController.h */,
+				9C66980214260DF1008DFE73 /* DigiDjDesignViewController.m */,
 				9C1BB22A14252C3100025237 /* NavigationController.h */,
 				9C1BB22B14252C3100025237 /* NavigationController.m */,
 				9C1BB2511425331800025237 /* LoginViewController.h */,
@@ -293,6 +315,21 @@
 				9CBC952F1425B93400E277EA /* SpotifySearchViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C66980514260DFD008DFE73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C1572751426185300CF449A /* digidj-jingle.mp3 */,
+				9C66980614260DFD008DFE73 /* background.png */,
+				9C66980714260DFD008DFE73 /* background@2x.png */,
+				9C66980814260DFD008DFE73 /* homeBackground.png */,
+				9C66980914260DFD008DFE73 /* homeBackground@2x.png */,
+				9C66980A14260DFD008DFE73 /* icon.png */,
+				9C66980B14260DFD008DFE73 /* icon@2x.png */,
+				9C66980C14260DFD008DFE73 /* swoosh.caf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9CBC94E6142572AC00E277EA /* SBJson_Classes */ = {
@@ -447,6 +484,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1BB22314252C3100025237 /* InfoPlist.strings in Resources */,
+				9C66980D14260DFD008DFE73 /* background.png in Resources */,
+				9C66980E14260DFD008DFE73 /* background@2x.png in Resources */,
+				9C66980F14260DFD008DFE73 /* homeBackground.png in Resources */,
+				9C66981014260DFD008DFE73 /* homeBackground@2x.png in Resources */,
+				9C66981114260DFD008DFE73 /* icon.png in Resources */,
+				9C66981214260DFD008DFE73 /* icon@2x.png in Resources */,
+				9C66981314260DFD008DFE73 /* swoosh.caf in Resources */,
+				9C1572761426185300CF449A /* digidj-jingle.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +552,7 @@
 				9CBC95341425BA1900E277EA /* SpotifyAPIWrapper.m in Sources */,
 				9CBC95441425C6DD00E277EA /* Song.m in Sources */,
 				9C6698011425FE5E008DFE73 /* SendSongRequest.m in Sources */,
+				9C66980414260DF1008DFE73 /* DigiDjDesignViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

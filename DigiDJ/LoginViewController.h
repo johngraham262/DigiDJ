@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "AppConstants.h"
+#import "DigiDjDesignViewController.h"
 
 @protocol LoginViewControllerDelegate;
 

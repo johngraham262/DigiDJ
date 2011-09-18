@@ -13,6 +13,8 @@
 @synthesize loginViewController;
 @synthesize logoutButton;
 @synthesize venmoClient;
+@synthesize digiDjDesignViewController;
+
 @synthesize venue;
 @synthesize song;
 
@@ -21,6 +23,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
     
     // Create the Venmo Client object (used for sending a payment through venmo)
     self.venmoClient = [VenmoClient clientWithAppId:venmoAppId 
@@ -31,26 +34,40 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *accessTok = [defaults objectForKey:@"access_token"];
 
+    NSLog(@"access tok: %@", accessTok);
+    
     logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" 
                                                     style:UIBarButtonItemStyleDone 
                                                    target:self 
                                                    action:@selector(logout)];
     
     if(!accessTok) {
-        loginViewController = [[LoginViewController alloc] init];
-        loginViewController.delegate = self;
-        window.rootViewController = loginViewController;
-        
-        self.navigationController = [[NavigationController alloc] 
-                                     initWithRootViewController:loginViewController];
-        navigationController.venmoClient = venmoClient;
+        digiDjDesignViewController = [[DigiDjDesignViewController alloc] init];
+        digiDjDesignViewController.delegate = self;
+        window.rootViewController = digiDjDesignViewController;
     } else {
         [self createLoginItems];
     }
     
-    window.rootViewController = navigationController;
+    
     [window makeKeyAndVisible];
     return YES;
+}
+
+- (void)didOpenApp {
+    loginViewController = [[LoginViewController alloc] init];
+    loginViewController.delegate = self;
+    
+    self.navigationController = [[NavigationController alloc]
+                                 initWithRootViewController:loginViewController];
+    navigationController.venmoClient = venmoClient;
+//    window.rootViewController = navigationController;    
+    
+    [UIView transitionWithView:window duration:0.6
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    animations:^{
+                        window.rootViewController = navigationController;
+                    } completion:NULL];
 }
 
 - (void)didLogin {
@@ -102,6 +119,7 @@
     navigationController.venmoClient = venmoClient;
     navigationController.venueDJTableViewController = venueDJTableViewController;
     navigationController.viewControllers = [NSArray arrayWithObject:venueDJTableViewController];
+    window.rootViewController = navigationController;
 }
 
 
