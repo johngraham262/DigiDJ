@@ -43,18 +43,18 @@ typedef enum {
 
     
     //spotify search bar
-    spotifySearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.spotifySearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     spotifySearchBar.placeholder = @"Search for your song";
     spotifySearchBar.delegate = self;
     
     //spotify uitableview
-    spotifySearchResultsTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0+40, 320, 480-44-40)];
+    self.spotifySearchResultsTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0+40, 320, 480-44-40)];
     spotifySearchResultsTable.delegate = self;
     spotifySearchResultsTable.dataSource = self;
     
 
     //dummy data
-    spotifySearchResultsDataArray = [[NSMutableArray alloc] init];
+    self.spotifySearchResultsDataArray = [NSMutableArray array];
     /*
     NSArray *dk1 = [NSArray arrayWithObjects:@"name", @"id", @"artist",nil];
     NSArray *dv1 = [NSArray arrayWithObjects:@"Get on Up", @"XY1", @"James Brown", nil];
@@ -76,6 +76,9 @@ typedef enum {
 
 - (void)viewDidUnload
 {
+    self.spotifySearchBar = nil;
+    self.spotifySearchResultsTable = nil;
+    self.spotifySearchResultsDataArray = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -168,7 +171,7 @@ typedef enum {
     NSString *note = [NSString stringWithFormat:@"to play \"%@\" by %@ from the album %@", 
                       selectedSong.name, selectedSong.artist, selectedSong.album];
     
-    venmoTransaction = [[VenmoTransaction alloc] init];
+    self.venmoTransaction = [[VenmoTransaction alloc] init];
     venmoTransaction.amount = amount;
     venmoTransaction.note = note;
     venmoTransaction.toUserHandle = venue.venmoUsername;
@@ -230,7 +233,7 @@ typedef enum {
     NSError *error = nil;
     NSArray *jsonObjects = [jsonParser objectWithString:response error:&error];
     
-    spotifyAPIWrapper = [[NSMutableArray alloc] init];
+    self.spotifyAPIWrapper = [NSMutableArray array];
     NSArray *allSongs = [jsonObjects valueForKey:@"tracks"];
     
     NSEnumerator *e = [allSongs objectEnumerator];
